@@ -1,6 +1,8 @@
 <h1>{{nombre}}</h1>
-
-<ul>
+<div>
+<button class="btn btn-primary" (click)="showData = !showData">{{ showData ? 'Ocultar data' : 'Mostrar data'}} </button>
+</div>
+<ul class="form-control" *ngIf="showData">
     <li *ngFor="let user of users">
         {{user.name | json}}
     </li>

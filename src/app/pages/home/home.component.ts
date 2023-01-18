@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   users:any = [];
   nombre= 'Carlos Portillo';
-
+  showData: boolean =false;
   constructor( private traerUsuarios:ApiUserService ){}
 
 
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
         console.log(res)
         this.users = res;
       }, err => {
-
+        console.log('error')
       }
       );
   }
